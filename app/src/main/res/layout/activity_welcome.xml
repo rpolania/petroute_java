@@ -52,7 +52,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.637"
-        app:srcCompat="@mipmap/petroute"
-        tools:srcCompat="@mipmap/petroute" />
+        app:srcCompat="@drawable/petroute"
+        tools:srcCompat="@drawable/petroute" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
