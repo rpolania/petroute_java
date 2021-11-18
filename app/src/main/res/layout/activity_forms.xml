@@ -20,8 +20,8 @@
         android:gravity="center"
         android:layout_margin="0dp"
         android:fontFamily="sans-serif"
-        android:text="Siguiente Mascota"
-        android:textSize="50sp"
+        android:text="Nueva Mascota en ruta"
+        android:textSize="40sp"
         android:textStyle="bold"/>
 
     <LinearLayout

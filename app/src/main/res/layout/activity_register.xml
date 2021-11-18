@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ic_launcher_foreground"
     android:orientation="vertical"
     android:padding="50dp"
     tools:context=".Login">
 
     <TextView
-        android:id="@+id/Login"
+        android:id="@+id/Register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -20,14 +21,14 @@
         android:gravity="center"
         android:layout_margin="0dp"
         android:fontFamily="sans-serif"
-        android:text="Inicia sesión"
+        android:text="Registrate"
         android:textSize="50dp"
         android:textStyle="bold"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:layout_marginBottom="50dp"
         android:orientation="vertical">
 
@@ -36,10 +37,25 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nombre de usuario">
+            android:hint="Nombre y Apellido de colaborador">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/nameUserInput"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/aliasUser"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Alias">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/aliasUserInput"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -51,6 +67,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
             android:hint="Contraseña">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -61,20 +78,34 @@
                 android:inputType="textPassword"/>
         </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailUser"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Correo electrónico">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailUserInput"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
     </LinearLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnlogin"
+        android:id="@+id/loginBut"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ingresar" />
-        <!--android:onClick="Ingresar"-->
+        android:text="Quiero registrame" />
+
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnregister"
+        android:id="@+id/backLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="No eres miembro? registrate" />
-        <!--android:onClick="Registro"-->
+        android:text="Regresar" />
 
 
 </LinearLayout>
