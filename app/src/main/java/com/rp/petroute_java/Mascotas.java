@@ -22,10 +22,10 @@ public class Mascotas extends AppCompatActivity {
     }
     public void init(){
         elements = new ArrayList<ElementList>(); // Instancia del objeto elements
-        elements.add(new ElementList("#775447", "Producto 2", "Colombia", "Activo")); // Tarjeta 1
-        elements.add(new ElementList("#607d8b", "Producto 3", "Colombia", "Activo")); // Tarjeta 2
-        elements.add(new ElementList("#03a9f4", "Producto 4", "Colombia", "Activo")); // Tarjeta 3
-        elements.add(new ElementList("#009688", "Producto 5", "Colombia", "Activo")); // Tarjeta 4
+        elements.add(new ElementList("#775447", "Mascota 2", "Mazuren", "Activo")); // Tarjeta 1
+        elements.add(new ElementList("#607d8b", "Mascota 3", "Colina", "Activo")); // Tarjeta 2
+        elements.add(new ElementList("#03a9f4", "Mascota 4", "Balcones", "Activo")); // Tarjeta 3
+        elements.add(new ElementList("#009688", "Mascota 5", "Cedritos", "Activo")); // Tarjeta 4
 
 
         // Declaramos el ListAdapter y recibe una lista y el context = de donde viene
