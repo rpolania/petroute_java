@@ -22,6 +22,7 @@ public class Mascotas extends AppCompatActivity {
     }
     public void init(){
         elements = new ArrayList<ElementList>(); // Instancia del objeto elements
+        elements.add(new ElementList("#775347", "Mascota 1", "Hacienda", "Activo")); // Tarjeta 0
         elements.add(new ElementList("#775447", "Mascota 2", "Mazuren", "Activo")); // Tarjeta 1
         elements.add(new ElementList("#607d8b", "Mascota 3", "Colina", "Activo")); // Tarjeta 2
         elements.add(new ElementList("#03a9f4", "Mascota 4", "Balcones", "Activo")); // Tarjeta 3
