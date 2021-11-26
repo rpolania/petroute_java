@@ -59,7 +59,7 @@ public class Login extends AppCompatActivity {
         String userId = name.getText().toString();
         String userPass = pass.getText().toString();
 
-            Intent i = new Intent(Login.this, register.class);
+            Intent i = new Intent(Login.this, Register.class);
             i.putExtra("Nombre", userId);
             startActivity(i);
             Toast.makeText(Login.this, "Llena tus datos", Toast.LENGTH_SHORT).show();

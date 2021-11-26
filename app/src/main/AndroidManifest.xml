@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Petroute_java">
         <activity
-            android:name=".register"
+            android:name=".Register"
             android:exported="false" />
         <activity
             android:name=".Mascotas"
