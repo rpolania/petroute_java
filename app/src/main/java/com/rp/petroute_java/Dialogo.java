@@ -15,7 +15,7 @@ import androidx.fragment.app.FragmentActivity;
 import org.w3c.dom.Text;
 
 
-public class Dialogo {
+public class Dialogo extends AppCompatActivity{
     Dialog dialog;
     public boolean answerYes;
 

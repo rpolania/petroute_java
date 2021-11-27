@@ -2,10 +2,13 @@ package com.rp.petroute_java;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,6 +20,7 @@ import java.util.List;
 
 public class Mascotas extends AppCompatActivity {
     List<ElementList> elements; // Metodo global
+    Dialogo d;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,13 +75,8 @@ public class Mascotas extends AppCompatActivity {
                 return true;
             case R.id.salir:
                 finish();
-//                Dialog d = new Dialog(Login.this,"Realmente deseas salir?","Hola gente", new View.OnClickListener() {
-//                            @Override
-//                            public void onClick(View view) {
-////                                Intent intent = new Intent(getApplicationContext(), CardsItems.class);
-////                                startActivity(intent);
-//                            }
-//                        });
+                //Llamar dialogo acá para confirmar logout
+                //d = new Dialogo(Mascotas.this,"Titulo","Texto");
 
                 return true;
             default:

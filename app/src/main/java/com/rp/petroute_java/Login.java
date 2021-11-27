@@ -6,17 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.button.MaterialButton;
 import com.rp.petroute_java.persistencia.DbUsers;
 
+import java.util.Objects;
+
 public class Login extends AppCompatActivity {
 
-    EditText username, password;
     DbUsers DB;
 
 
@@ -25,7 +24,8 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        getSupportActionBar().hide();
+        // getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
 
         TextView name = findViewById(R.id.nameUserInput);
         TextView passwd = findViewById(R.id.passUserInput);
