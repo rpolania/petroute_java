@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/route"
+        android:title="Proceder a ruta" />
+    <item
+        android:id="@+id/deleteDog"
+        android:title="Eliminar perros asignados" />
+    <item
+        android:id="@+id/salir"
+        android:title="Salir" />
+</menu>

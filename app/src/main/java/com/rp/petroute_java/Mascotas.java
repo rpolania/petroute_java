@@ -1,10 +1,16 @@
 package com.rp.petroute_java;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Dialog;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +27,7 @@ public class Mascotas extends AppCompatActivity {
 
     }
     public void init(){
-        elements = new ArrayList<ElementList>(); // Instancia del objeto elements
+        elements = new ArrayList<>(); // Instancia del objeto elements
         elements.add(new ElementList("#775347", "Mascota 1", "Hacienda", "Activo")); // Tarjeta 0
         elements.add(new ElementList("#775447", "Mascota 2", "Mazuren", "Activo")); // Tarjeta 1
         elements.add(new ElementList("#607d8b", "Mascota 3", "Colina", "Activo")); // Tarjeta 2
@@ -40,5 +46,42 @@ public class Mascotas extends AppCompatActivity {
 
         recyclerView.setAdapter(listAdapter);
 
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.options_menu, menu);
+        return true;
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int nro = item.getItemId();
+        float valor;
+
+        //SET = Modificar
+        //GET = Obtener
+
+        switch (nro){
+            case R.id.route:
+                Toast.makeText(Mascotas.this,"Has seleccionado proceder a ruta",Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.deleteDog:
+                Toast.makeText(Mascotas.this,"Has seleccionado eliminar perro de la ruta",Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.salir:
+                finish();
+//                Dialog d = new Dialog(Login.this,"Realmente deseas salir?","Hola gente", new View.OnClickListener() {
+//                            @Override
+//                            public void onClick(View view) {
+////                                Intent intent = new Intent(getApplicationContext(), CardsItems.class);
+////                                startActivity(intent);
+//                            }
+//                        });
+
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
