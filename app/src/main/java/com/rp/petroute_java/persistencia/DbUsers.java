@@ -19,14 +19,14 @@ public class DbUsers extends DbHelper{
     }
 
 
-    public Boolean insertUser(String userName, String password){
+    public Boolean insertUser(String userName, String password, String email){
         DbHelper dbHelper = new DbHelper(context); // Instancia del objeto DbHleper = nuestra base de datos
         SQLiteDatabase db = dbHelper.getWritableDatabase(); // Agregamos los datos
 
         ContentValues values = new ContentValues(); // Instancia del objeto values
         values.put("userName", userName);
         values.put("password", password);
-        values.put("correo", password);
+        values.put("email", email);
 
         long result = db.insert(USERS_TABLE, null, values);
         if (result == -1) return false;

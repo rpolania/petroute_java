@@ -3,6 +3,7 @@ package com.rp.petroute_java;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,7 +30,7 @@ public class Register extends AppCompatActivity {
         correo = findViewById(R.id.emailUser);
         btnRegistro = findViewById(R.id.registrBut);
         btnBack = findViewById(R.id.backLogin);
-        DB = new DbUsers (this);
+        DB = new DbUsers (Register.this);
 
         btnRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,7 +46,8 @@ public class Register extends AppCompatActivity {
                     if (pass.equals(repass)) {
                         Boolean checkuser = DB.checkUserName(user);
                         if (checkuser == false) {
-                            Boolean insert = DB.insertUser(user, pass);
+                            Boolean insert = DB.insertUser(user, pass, email);
+                            Log.d("Estado de insert",insert.toString());
                             if (insert == true) {
                                 Toast.makeText(Register.this, "Registrado correctamente", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(getApplicationContext(), Login.class);

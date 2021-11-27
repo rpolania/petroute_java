@@ -15,12 +15,12 @@ import androidx.fragment.app.FragmentActivity;
 import org.w3c.dom.Text;
 
 
-public class Dialog {
+public class Dialogo {
     Dialog dialog;
     public boolean answerYes;
 
-    public Dialog(@Nullable Context context, String titulo, String text, View.OnClickListener onclicOK) {
-        dialog = new Dialog(context);
+    public Dialogo(@Nullable Context context, String titulo, String text, View.OnClickListener onclicOK) {
+        Dialog dialog = new Dialog(context);
         dialog.setContentView(R.layout.custom_dialog);
         TextView textTitle = dialog.findViewById(R.id.textView);
         TextView textDialog =  dialog.findViewById(R.id.textView2);

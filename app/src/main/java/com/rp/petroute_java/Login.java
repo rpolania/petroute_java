@@ -17,7 +17,6 @@ import com.rp.petroute_java.persistencia.DbUsers;
 public class Login extends AppCompatActivity {
 
     EditText username, password;
-    Button loginbtn, btnRegis; // Declaramos de forma global nuestra variable Button
     DbUsers DB;
 
 
@@ -29,10 +28,10 @@ public class Login extends AppCompatActivity {
         getSupportActionBar().hide();
 
         TextView name = findViewById(R.id.nameUserInput);
-        TextView pass = findViewById(R.id.passUserInput);
+        TextView passwd = findViewById(R.id.passUserInput);
 
-        username = findViewById(R.id.btnlogin);
-        password = findViewById(R.id.btnregister);
+//        username = findViewById(R.id.btnlogin);
+//        password = findViewById(R.id.btnregister);
 
 // Seguro que estos botones son del login??? o son del Register???
         MaterialButton loginBut = findViewById(R.id.btnlogin);
@@ -43,21 +42,23 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String user = name.getText().toString();
-                String pass = pass.getText().toString();
+                String pass = passwd.getText().toString();
 
                 if (TextUtils.isEmpty(user) || TextUtils.isEmpty(pass))
                     Toast.makeText(Login.this, "Todos los espacios son requeridos", Toast.LENGTH_SHORT).show();
                 else {
                     Boolean checkuserpass = DB.checkPassword(user, pass);
                     if (checkuserpass == true) {
-                        // Toast.makeText(MainActivity.this, "Login correcto", Toast.LENGTH_SHORT).show();
-                        Dialog d = new Dialog(Login.this,"Aqui va el titulo","Hola gente", new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-//                                Intent intent = new Intent(getApplicationContext(), CardsItems.class);
-//                                startActivity(intent);
-                            }
-                        });
+                        Intent intent = new Intent(getApplicationContext(), Mascotas.class);
+                        startActivity(intent);
+                        Toast.makeText(Login.this, "Login correcto", Toast.LENGTH_SHORT).show();
+//                        Dialog d = new Dialog(Login.this,"Aqui va el titulo","Hola gente", new View.OnClickListener() {
+//                            @Override
+//                            public void onClick(View view) {
+////                                Intent intent = new Intent(getApplicationContext(), CardsItems.class);
+////                                startActivity(intent);
+//                            }
+//                        });
                     } else {
                         Toast.makeText(Login.this, "Login incorrecto", Toast.LENGTH_SHORT).show();
                     }
@@ -67,7 +68,7 @@ public class Login extends AppCompatActivity {
         });
 
 
-        btnRegis.setOnClickListener(new View.OnClickListener() {
+        registerBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // Cambiamos de layout/Vista

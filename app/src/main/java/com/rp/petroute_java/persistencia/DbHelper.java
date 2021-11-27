@@ -21,10 +21,10 @@ public class DbHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL(" CREATE TABLE " + USERS_TABLE + "(" +
                 "idUser INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "userName TEXT NOT NULL," +
-                "password TEXT NOT NULL)");
+                "password TEXT NOT NULL," +
+                "email TEXT NOT NULL)");
 
     }
-
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
