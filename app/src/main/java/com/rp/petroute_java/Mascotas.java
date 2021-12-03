@@ -74,7 +74,14 @@ public class Mascotas extends AppCompatActivity {
                 Toast.makeText(Mascotas.this,"Has seleccionado eliminar perro de la ruta",Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.salir:
-                finish();
+                Dialogo d = new Dialogo(this,"¿Deseas realmente salir?","", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), Login.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                });
                 //Llamar dialogo acá para confirmar logout
                 //d = new Dialogo(Mascotas.this,"Titulo","Texto");
 
