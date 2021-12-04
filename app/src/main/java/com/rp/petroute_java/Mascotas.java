@@ -68,6 +68,8 @@ public class Mascotas extends AppCompatActivity {
 
         switch (nro){
             case R.id.route:
+                Intent intent = new Intent(getApplicationContext(), fragmentMain.class);
+                startActivity(intent);
                 Toast.makeText(Mascotas.this,"Has seleccionado proceder a ruta",Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.deleteDog:

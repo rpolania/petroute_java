@@ -50,7 +50,7 @@ public class Register extends AppCompatActivity {
                             Log.d("Estado de insert",insert.toString());
                             if (insert == true) {
                                 Toast.makeText(Register.this, "Registrado correctamente", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(getApplicationContext(), Mascotas.class);
+                                Intent intent = new Intent(getApplicationContext(), Login.class);
                                 startActivity(intent);
 
                             } else {
