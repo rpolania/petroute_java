@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.snackbar.Snackbar;
 import com.rp.petroute_java.persistencia.DbUsers;
 
 import java.util.Objects;
@@ -52,16 +53,10 @@ public class Login extends AppCompatActivity {
                         Intent intent = new Intent(getApplicationContext(), Mascotas.class);
                         startActivity(intent);
                         Toast.makeText(Login.this, "Login correcto", Toast.LENGTH_SHORT).show();
-//                        Dialog d = new Dialog(Login.this,"Aqui va el titulo","Hola gente", new View.OnClickListener() {
-//                            @Override
-//                            public void onClick(View view) {
-////                                Intent intent = new Intent(getApplicationContext(), CardsItems.class);
-////                                startActivity(intent);
-//                            }
-//                        });
                     } else {
-                        Toast.makeText(Login.this, "Login incorrecto", Toast.LENGTH_SHORT).show();
-                    }
+                        Snackbar snackbar = Snackbar.make(v,"Credenciales incorrectas o usuario " +
+                                "no existe. Intentalo de nuevo o registrate ", Snackbar.LENGTH_LONG);
+                        snackbar.show();                     }
                 }
             }
 
