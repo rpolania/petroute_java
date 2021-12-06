@@ -73,6 +73,8 @@ public class Mascotas extends AppCompatActivity {
                 Toast.makeText(Mascotas.this,"Has seleccionado proceder a ruta",Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.deleteDog:
+                Intent intent2 = new Intent(getApplicationContext(), FragmentPrueba.class);
+                startActivity(intent2);
                 Toast.makeText(Mascotas.this,"Has seleccionado eliminar perro de la ruta",Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.salir:

@@ -24,18 +24,18 @@
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/routeButton"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="48dp"
             android:layout_margin="16dp"
             android:text="Ruta"
             android:textAlignment="center"
-            app:backgroundTint="@color/petroute_color"
 
+            app:backgroundTint="@color/petroute_color"
             tools:ignore="RtlCompat" />
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/exitButton"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="48dp"
             android:layout_margin="16dp"
             android:text="Salir"
             android:textAlignment="center"
